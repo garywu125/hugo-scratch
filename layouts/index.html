@@ -53,7 +53,14 @@
                         Hello there
                     </div>
                 </div>
-                <button onclick="swalert()">sweet alert</button>
+                <!-- using vanilla  javascript -->
+                <button onclick="swalert()">js sweetalert</button> 
+                <!-- using alpine.js   -->
+                <div x-data="{}">
+                    <button x-on:click="swalert()">alpine div sweetalert</button>                    
+                </div> 
+                <!-- using alpine.js  inline -->
+                <button x-data="{}" x-on:click="swalert()">alpine inline sweetalert</button>                                  
             </div>
 
         </section>
