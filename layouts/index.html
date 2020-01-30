@@ -10,7 +10,10 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.7/dist/alpine.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9" defer></script>
     <title>{{ .Title }}</title>
+    <!-- invoke jascript function from static/js directory -->
+    <script src="{{ $.Site.BaseURL }}/js/swalert.js" defer></script>
 </head>
 
 <body>
@@ -32,10 +35,12 @@
                 <h1>this is first section</h1>
                 {{ $address := "123 Main St." }}
                 <h2>{{ $address }}</h2>
-                This page contains HTML examples of text - examples of text-specific code that you can use for your own website.
+                This page contains HTML examples of text - examples of text-specific code that you can use for your own
+                website.
 
-To use the code, copy it straight from the text box and paste it into your own website. Feel free to modify it as required.
-                
+                To use the code, copy it straight from the text box and paste it into your own website. Feel free to
+                modify it as required.
+
             </div>
         </section>
         <section class="section">
@@ -43,12 +48,14 @@ To use the code, copy it straight from the text box and paste it into your own w
                 this is second section
                 <div x-data="{ open: false }">
                     <button x-on:click="open = !open">Click me</button>
-                  
+
                     <div x-show="open">
-                      Hello there
+                        Hello there
                     </div>
-                  </div>
+                </div>
+                <button onclick="swalert()">sweet alert</button>
             </div>
+
         </section>
     </div>
     
